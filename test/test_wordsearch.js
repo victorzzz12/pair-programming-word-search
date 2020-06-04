@@ -35,4 +35,68 @@ describe("#wordSearch()", function() {
 
     assert.isTrue(result);
   });
+
+  it("should return true if the word is present vertically", function() {
+    const result = wordSearch([
+      ['A', 'S', 'C', 'F', 'Q', 'U', 'A', 'L'],
+      ['S', 'E', 'O', 'P', 'F', 'E', 'L', 'D'],
+      ['Y', 'I', 'D', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'N', 'E', 'T', 'E', 'V', 'R', 'G'],
+      ['W', 'F', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'E', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['U', 'L', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'CODE')
+
+    assert.isTrue(result);
+  });
+
+  it("should return true if the word is present horizontally but backwards", function() {
+    const result = wordSearch([
+      ['A', 'S', 'E', 'D', 'O', 'C', 'A', 'L'],
+      ['S', 'E', 'O', 'P', 'F', 'E', 'L', 'D'],
+      ['Y', 'I', 'D', 'F', 'Q', 'U', 'A', 'L'],
+      ['H', 'N', 'F', 'T', 'E', 'V', 'R', 'G'],
+      ['W', 'F', 'C', 'S', 'Y', 'E', 'R', 'L'],
+      ['B', 'E', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['U', 'L', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'CODE')
+
+    assert.isTrue(result);
+  });
+
+  it("should return true if the word is present vertically but backwards", function() {
+    const result = wordSearch([
+      ['A', 'S', 'E', 'D', 'D', 'C', 'A', 'L'],
+      ['S', 'E', 'O', 'P', 'F', 'E', 'L', 'D'],
+      ['Y', 'I', 'D', 'F', 'Q', 'D', 'A', 'L'],
+      ['H', 'N', 'F', 'T', 'E', 'O', 'R', 'G'],
+      ['W', 'F', 'C', 'S', 'Y', 'C', 'R', 'L'],
+      ['B', 'E', 'R', 'E', 'N', 'E', 'Y', 'B'],
+      ['U', 'L', 'T', 'W', 'A', 'P', 'A', 'I'],
+      ['O', 'D', 'C', 'A', 'K', 'U', 'A', 'S'],
+      ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+    ], 'CODE')
+
+    assert.isTrue(result);
+  });
+
+  // it("should return true if the word is present diagonally downwards to the right", function() {
+  //   const result = wordSearch([
+  //     ['A', 'S', 'E', 'D', 'D', 'C', 'A', 'L'],
+  //     ['S', 'E', 'O', 'P', 'F', 'E', 'L', 'D'],
+  //     ['Y', 'I', 'C', 'F', 'Q', 'D', 'G', 'L'],
+  //     ['H', 'N', 'F', 'O', 'E', 'N', 'R', 'G'],
+  //     ['W', 'F', 'C', 'S', 'D', 'O', 'R', 'L'],
+  //     ['B', 'E', 'R', 'F', 'N', 'I', 'Y', 'B'],
+  //     ['U', 'L', 'O', 'W', 'A', 'P', 'N', 'I'],
+  //     ['O', 'C', 'C', 'A', 'K', 'U', 'A', 'G'],
+  //     ['E', 'Z', 'K', 'F', 'Q', 'U', 'A', 'L'],
+  //   ], 'CODING')
+
+  //   assert.isTrue(result);
+  // });
 });
